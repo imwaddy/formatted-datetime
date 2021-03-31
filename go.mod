@@ -1,4 +1,4 @@
-module formatted-datetime
+module github.com/imwaddy/formatted-datetime/formatteddatetime
 
 go 1.15
 

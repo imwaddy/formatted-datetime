@@ -63,3 +63,7 @@ func main() {
 -----Only Time---------------
 11:24:23 PM
 ```
+
+## License
+
+formatted-datetime source code is available under the MIT [License](/LICENSE).
