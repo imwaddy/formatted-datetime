@@ -64,6 +64,19 @@ func main() {
 11:24:23 PM
 ```
 
+` Benchmarking `
+
+```
+goos: windows
+goarch: amd64
+pkg: github.com/imwaddy/formatted-datetime/formatteddatetime
+cpu: Intel(R) Core(TM) i7-10610U CPU @ 1.80GHz
+Benchmark_Package/Run_bGetFormattedDateTime-8         	 4784924	       290.8 ns/op	      16 B/op	       1 allocs/op
+Benchmark_Package/Run_bGetFormattedTime-8             	 3307118	       330.1 ns/op	      16 B/op	       1 allocs/op
+Benchmark_Package/Run_bGetFormattedDate-8             	 3366686	       346.9 ns/op	      16 B/op	       1 allocs/op
+
+```
+
 ## License
 
 formatted-datetime source code is available under the MIT [License](/LICENSE).
