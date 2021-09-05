@@ -1,5 +1,3 @@
 module github.com/imwaddy/formatted-datetime
 
-go 1.15
-
-require github.com/araddon/dateparse v0.0.0-20210207001429-0eec95c9db7e
+go 1.17
