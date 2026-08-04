@@ -8,7 +8,7 @@ This service has a single parameter i.e. Format string which is any of 4  dash(-
 *INSTALLATION*
 
 ```
-go get github.com/imwaddy/formatted-datetime/formatteddatetime
+go get github.com/imwaddy/formatted-datetime/v2/formatteddatetime
 
 ````
 
@@ -31,14 +31,14 @@ import (
 	"fmt"
 	"time"
 
-	fd "github.com/imwaddy/formatted-datetime/formatteddatetime"
+	fd "github.com/imwaddy/formatted-datetime/v2/formatteddatetime"
 )
 
 func main() {
 	testTime := []string{"-", "/", " ", "."}
-	for i := 0; i < len(testTime); i++ {
+	for _, sep := range testTime {
 		v := fd.TimeStruct{CurrentTime: time.Now()}
-		fmt.Println(v.GetFormattedDatetime(testTime[i]))
+		fmt.Println(v.GetFormattedDatetime(sep))
 		time.Sleep(1000 * time.Millisecond)
 	}
 
@@ -67,14 +67,13 @@ func main() {
 ` Benchmarking `
 
 ```
-goos: windows
-goarch: amd64
-pkg: github.com/imwaddy/formatted-datetime/formatteddatetime
-cpu: Intel(R) Core(TM) i7-10610U CPU @ 1.80GHz
-Benchmark_Package/Run_bGetFormattedDateTime-8         	 4784924	       290.8 ns/op	      16 B/op	       1 allocs/op
-Benchmark_Package/Run_bGetFormattedTime-8             	 3307118	       330.1 ns/op	      16 B/op	       1 allocs/op
-Benchmark_Package/Run_bGetFormattedDate-8             	 3366686	       346.9 ns/op	      16 B/op	       1 allocs/op
-
+goos: darwin
+goarch: arm64
+pkg: github.com/imwaddy/formatted-datetime/v2/formatteddatetime
+cpu: Apple M2 Pro
+Benchmark_GetFormattedDateTime-12    	55128481	        21.48 ns/op	      16 B/op	       1 allocs/op
+Benchmark_GetFormattedTime-12        	54073033	        22.68 ns/op	      16 B/op	       1 allocs/op
+Benchmark_GetFormattedDate-12        	55455535	        21.53 ns/op	      16 B/op	       1 allocs/op
 ```
 
 ## License
