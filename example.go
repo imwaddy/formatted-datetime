@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"time"
 
-	fd "github.com/imwaddy/formatted-datetime/formatteddatetime"
+	fd "github.com/imwaddy/formatted-datetime/v2/formatteddatetime"
 )
 
 func main() {
 	testTime := []string{"-", "/", " ", "."}
-	for i := 0; i < len(testTime); i++ {
+	for _, sep := range testTime {
 		v := fd.TimeStruct{CurrentTime: time.Now()}
-		fmt.Println(v.GetFormattedDatetime(testTime[i]))
+		fmt.Println(v.GetFormattedDatetime(sep))
 		time.Sleep(1000 * time.Millisecond)
 	}
 
