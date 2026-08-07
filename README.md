@@ -8,7 +8,7 @@ This service has a single parameter i.e. Format string which is any of 4  dash(-
 *INSTALLATION*
 
 ```
-go get github.com/imwaddy/formatted-datetime/v2/formatteddatetime
+go get github.com/imwaddy/formatted-datetime/v2
 
 ````
 
@@ -31,7 +31,7 @@ import (
 	"fmt"
 	"time"
 
-	fd "github.com/imwaddy/formatted-datetime/v2/formatteddatetime"
+	fd "github.com/imwaddy/formatted-datetime/v2"
 )
 
 func main() {
@@ -69,7 +69,7 @@ func main() {
 ```
 goos: darwin
 goarch: arm64
-pkg: github.com/imwaddy/formatted-datetime/v2/formatteddatetime
+pkg: github.com/imwaddy/formatted-datetime/v2
 cpu: Apple M2 Pro
 Benchmark_GetFormattedDateTime-12    	55128481	        21.48 ns/op	      16 B/op	       1 allocs/op
 Benchmark_GetFormattedTime-12        	54073033	        22.68 ns/op	      16 B/op	       1 allocs/op

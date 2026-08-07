@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	fd "github.com/imwaddy/formatted-datetime/v2/formatteddatetime"
+	fd "github.com/imwaddy/formatted-datetime/v2"
 )
 
 func main() {
