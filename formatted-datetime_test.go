@@ -98,10 +98,10 @@ func Test_GetFormattedDateTime(t *testing.T) {
 }
 
 func Benchmark_GetFormattedDateTime(b *testing.B) {
-	// run the GetFormattedDate function b.N times
+	// run the GetFormattedDatetime function b.N times
 	v := TimeStruct{CurrentTime: time.Now()}
 	for n := 0; n < b.N; n++ {
-		v.GetFormattedDate("/")
+		v.GetFormattedDatetime("/")
 	}
 }
 
